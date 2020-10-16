@@ -13,4 +13,12 @@ module.exports = function(controller) {
         await bot.reply(message, `Echo: ${ message.text }`);
     });
 
+    // controller.on('message,direct_message', async(bot, message) => {
+    //     await bot.reply(message, `Echo: ${ message.text }`);
+    // });
+    
+    controller.on('hello', async(bot, message) => {
+        await bot.reply(message, `What do you want to know about me?`);
+    });
+
 }
