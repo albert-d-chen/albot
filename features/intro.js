@@ -13,18 +13,26 @@ module.exports = function (controller) {
 
        
         controller.on('welcome_back', async (bot, message) => {
-
             await bot.reply(message,{
                 text: 'What would you like to know about me?',
                 quick_replies: [
                     {
-                        title: 'University of California, San Diego',
-                        payload: 'UCSD',
+                        title: 'Education',
+                        payload: 'Education',
                     },
                     {
-                        title: 'Case Western Reserve University',
-                        payload: 'CWRU',
+                        title: 'Skills',
+                        payload: 'Skills',
                     },
+                    {
+                        title: 'Contact Information',
+                        payload: 'Contact Information'
+                    },
+                    {
+                        title: 'Open to work?',
+                        payload: 'Employment Status'
+                    },
+                    
                 ]
             });
         });

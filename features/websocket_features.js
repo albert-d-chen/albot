@@ -8,10 +8,10 @@ module.exports = function(controller) {
 
         console.log('Loading sample web features...');
 
-        controller.hears(new RegExp('education'), 'message', async (bot, message) => {
+        controller.hears(new RegExp('Education'), 'message', async (bot, message) => {
 
             await bot.reply(message,{
-                text: 'Here is a list of my education history',
+                text: 'Here is a list of my education history:',
                 quick_replies: [
                     {
                         title: 'University of California, San Diego',
