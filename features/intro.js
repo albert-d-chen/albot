@@ -13,6 +13,8 @@ module.exports = function (controller) {
 
        
         controller.on('welcome_back', async (bot, message) => {
+            await bot.reply(message, "Welcome! I am ALBot, Albert's personal digital avatar.");
+
             await bot.reply(message,{
                 text: 'What would you like to know about me?',
                 quick_replies: [
