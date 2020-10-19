@@ -16,6 +16,10 @@ module.exports = function(controller) {
               title: "Contact Information",
               payload: "Contact Information",
             },
+            {
+              title: "Open to work?",
+              payload: "Employment Status",
+            },
           ],
         });
     });
@@ -35,6 +39,10 @@ module.exports = function(controller) {
             {
               title: "Contact Information",
               payload: "Contact Information",
+            },
+            {
+              title: "Open to work?",
+              payload: "Employment Status",
             },
           ],
         });
@@ -56,6 +64,10 @@ module.exports = function(controller) {
               title: "Contact Information",
               payload: "Contact Information",
             },
+            {
+              title: "Open to work?",
+              payload: "Employment Status",
+            },
           ],
         });
     });
@@ -74,6 +86,10 @@ module.exports = function(controller) {
             {
               title: "Contact Information",
               payload: "Contact Information",
+            },
+            {
+              title: "Open to work?",
+              payload: "Employment Status",
             },
           ],
         });
@@ -94,6 +110,10 @@ module.exports = function(controller) {
             {
               title: "Contact Information",
               payload: "Contact Information",
+            },
+            {
+              title: "Open to work?",
+              payload: "Employment Status",
             },
           ],
         });

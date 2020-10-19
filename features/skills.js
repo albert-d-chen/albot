@@ -13,6 +13,14 @@ module.exports = function(controller) {
               title: "Skills",
               payload: "Skills",
             },
+            {
+              title: "Contact Information",
+              payload: "Contact Information",
+            },
+            {
+              title: "Open to work?",
+              payload: "Employment Status",
+            },
           ],
         });
     });
