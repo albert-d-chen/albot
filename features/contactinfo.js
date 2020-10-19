@@ -6,23 +6,23 @@ module.exports = function(controller) {
           quick_replies: [
             {
               title: "Email",
-              payload: "adc054@eng.ucsd.edu",
+              payload: "Email",
             },
             {
               title: "Phone Number",
-              payload: "(408)-439-3568",
+              payload: "Phone Number",
             },
             {
               title: "Github",
-              payload: `${'https://github.com/albert-d-chen'.link('https://github.com/albert-d-chen')}`,
+              payload: 'Github',
             },
             {
               title: "LinkedIn",
-              payload: `${'https://www.linkedin.com/in/albertdchen/'.link('https://www.linkedin.com/in/albertdchen/')}`,
+              payload: 'LinkedIn',
             },
             {
               title: "AngelList",
-              payload: `${'https://angel.co/u/albert-d-chen'.link('https://angel.co/u/albert-d-chen')}`,
+              payload: 'AngelList',
             },
           ],
         });
