@@ -19,7 +19,7 @@ module.exports = function(controller) {
     typing.before("next_thread", async () => {
       return new Promise((resolve) => {
         // simulate some long running process
-        setTimeout(resolve, 3000);
+        setTimeout(resolve, 1000);
       });
     });
 
@@ -39,11 +39,11 @@ module.exports = function(controller) {
              quick_replies: [
                {
                  title: "Degree",
-                 payload: "Master's of Science in Bioengineering",
+                 payload: "UCSD Degree",
                },
                {
-                 title: "Year Graduated",
-                 payload: "2017-2019",
+                 title: "Years Attended",
+                 payload: "Years attended at UCSD",
                },
              ],
            });
@@ -64,11 +64,11 @@ module.exports = function(controller) {
             quick_replies: [
               {
                 title: "Degree",
-                payload: "Bachelor's of Science in Bioengineering",
+                payload: "CWRU Degree",
               },
               {
-                title: "Year Graduated",
-                payload: "2013-2017",
+                title: "Year Attended",
+                payload: "Years attended at CWRU",
               },
             ],
           });
@@ -91,11 +91,11 @@ module.exports = function(controller) {
                 quick_replies: [
                 {
                     title: "Degree",
-                    payload: "Web development / Fullstack software engineering",
+                    payload: "AA Degree",
                 },
                 {
-                    title: "Year Graduated",
-                    payload: "2020-2020",
+                    title: "Year Attended",
+                    payload: "Years attended at AA",
                 },
                 ],
             });
