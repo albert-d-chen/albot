@@ -54,6 +54,10 @@ module.exports = function(controller) {
                 title: "AngelList",
                 payload: 'AngelList',
                 },
+                {
+                title: 'Personal Site',
+                payload: 'Personal Site'
+                }
             ],
         });
         }, 1000);

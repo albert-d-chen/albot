@@ -25,7 +25,7 @@ module.exports = function(controller) {
     controller.addDialog(typing);
 
 
-    controller.hears(async (message) => message.text && message.text.toLowerCase() === 'email' || 'phone number' || 'github' || 'angellist' || 'linkedin' || 'ucsd degree' || 'cwru degree' || 'aa degree' || 'years attended at cwru' || 'years attended at ucsd' || 'years attended at aa', ['message'], async (bot, message) => {
+    controller.hears(async (message) => message.text && message.text.toLowerCase() === 'email' || 'phone number' || 'github' || 'angellist' || 'linkedin' || 'ucsd degree' || 'cwru degree' || 'aa degree' || 'years attended at cwru' || 'years attended at ucsd' || 'years attended at aa' || 'personal site' || 'job history', ['message'], async (bot, message) => {
         await bot.reply(message, { type: "typing" });
 
         
@@ -56,7 +56,11 @@ module.exports = function(controller) {
                 await bot.reply(message, "I attended App Academy from 2020-2020");
             } else if (message.text && message.text.toLowerCase() === "aa degree") {
                 await bot.reply(message, "I completed the App Academy bootcamp with a concentration on web development and fullstack software engineering");
-            }
+            } else if (message.text && message.text.toLowerCase() === "personal site") {
+                await bot.reply(message, `My personal site is ${'https://albert-d-chen.github.io/portfolio/'.link('https://albert-d-chen.github.io/portfolio/')}`);
+            } else if (message.text && message.text.toLowerCase() === "job history") {
+                await bot.reply(message, `This is my job history:`);
+            } 
 
           await bot.reply(message, {
             text: "What else would you like to know about me?",

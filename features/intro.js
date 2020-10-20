@@ -27,6 +27,10 @@ module.exports = function (controller) {
                         payload: 'Skills',
                     },
                     {
+                        title: 'Job History',
+                        payload: 'Job History'
+                    },
+                    {
                         title: 'Contact Information',
                         payload: 'Contact Information'
                     },
