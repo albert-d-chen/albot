@@ -1,3 +1,8 @@
+# I am ALBot
+
+This is a fun way to get to know me and my past experience. Ask ALBot some questions about me and he'll respond! This project utilizes botkit.ai starter kit.
+
+
 # Botkit Starter Kit
 
 This is a Botkit starter kit for web, created with the [Yeoman generator](https://github.com/howdyai/botkit/tree/master/packages/generator-botkit#readme).
