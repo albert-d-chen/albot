@@ -28,7 +28,7 @@ module.exports = function(controller) {
         setTimeout(async () => {
           // will have to reset context because turn has now ended.
           await bot.changeContext(message.reference);
-          await bot.reply(message, 'My skills include Javascript, Ruby, Ruby on Rails, React, Redux.');
+          await bot.reply(message, 'My skills include Javascript, Ruby, Ruby on Rails, React, Redux, HTML, CSS, AWS, MongoDB, Express.js, Node.js, Git and Heroku');
 
         }, 1000);
 

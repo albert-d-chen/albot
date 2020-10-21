@@ -91,36 +91,41 @@ module.exports = function(controller) {
                 `I worked at ACTRI from September 2018 to June 2019`
               );
             } else {
-                await bot.reply(
-                  message,
-                  `I did not understand that.`
-                );
+                if (
+                  (message.text &&
+                    message.text.toLowerCase() !== "job history") &&
+                  (message.text &&
+                    message.text.toLowerCase() !== "exelixis") &&
+                  (message.text && message.text.toLowerCase() !== "actri")
+                ) {
+                  await bot.reply(message, `I did not understand that.`);
 
-                await bot.reply(message, {
-                  text: "Maybe try:",
-                  quick_replies: [
-                    {
-                      title: "Education",
-                      payload: "Education",
-                    },
-                    {
-                      title: "Skills",
-                      payload: "Skills",
-                    },
-                    {
-                      title: "Job History",
-                      payload: "Job History",
-                    },
-                    {
-                      title: "Contact Information",
-                      payload: "Contact Information",
-                    },
-                    {
-                      title: "Open to work?",
-                      payload: "Employment Status",
-                    },
-                  ],
-                });
+                  await bot.reply(message, {
+                    text: "Maybe try:",
+                    quick_replies: [
+                      {
+                        title: "Education",
+                        payload: "Education",
+                      },
+                      {
+                        title: "Skills",
+                        payload: "Skills",
+                      },
+                      {
+                        title: "Job History",
+                        payload: "Job History",
+                      },
+                      {
+                        title: "Contact Information",
+                        payload: "Contact Information",
+                      },
+                      {
+                        title: "Open to work?",
+                        payload: "Employment Status",
+                      },
+                    ],
+                  });
+                }
             }
 
         if (
