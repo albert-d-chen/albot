@@ -10,11 +10,11 @@ module.exports = function(controller) {
     // });
 
     // controller.on('message,direct_message', async(bot, message) => {
-    //     await bot.reply(message, `Echo: ${ message.text }`);
+    //     await bot.reply(message, `I don't think I understood what you said, maybe try: "education", "skills", "job history", "contact information", or "open to work?"`);
     // });
 
-    // controller.on('message,direct_message', async(bot, message) => {
-    //     await bot.reply(message, `Echo: ${ message.text }`);
-    // });
+    controller.on('message,direct_message', async(bot, message) => {
+        await bot.reply(message, `Echo: ${ message.text }`);
+    });
 
 }

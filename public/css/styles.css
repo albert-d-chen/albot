@@ -189,12 +189,21 @@ a.button:hover {
   border: none;
 }
 #message_window footer button {
-  width: 50px;
+  width: 100px;
   background: none;
-  border: 0;
+  background-color: rgb(28, 250, 28);
   cursor: pointer;
-  color: blue;
+  color: white;
   font-weight: bold;
+  border-radius: 25px;
+  padding: 10px;
+  border: none;
+  box-shadow: 5px;
+  
+}
+#message_window footer button:hover {
+  background-color: rgb(158, 235, 158)
+  
 }
 #message_window form {
   display: flex;

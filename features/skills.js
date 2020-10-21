@@ -38,24 +38,28 @@ module.exports = function(controller) {
           await bot.reply(message, {
             text: "What else would you like to know about me?",
             quick_replies: [
-                {
+              {
                 title: "Education",
                 payload: "Education",
-                },
-                {
+              },
+              {
                 title: "Skills",
                 payload: "Skills",
-                },
-                {
+              },
+              {
+                title: "Job History",
+                payload: "Job History",
+              },
+              {
                 title: "Contact Information",
                 payload: "Contact Information",
-                },
-                {
+              },
+              {
                 title: "Open to work?",
                 payload: "Employment Status",
-                },
+              },
             ],
-            });
+          });
         }, 1000);
 
 

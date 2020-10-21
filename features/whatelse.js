@@ -58,10 +58,92 @@ module.exports = function(controller) {
                 await bot.reply(message, "I completed the App Academy bootcamp with a concentration on web development and fullstack software engineering");
             } else if (message.text && message.text.toLowerCase() === "personal site") {
                 await bot.reply(message, `My personal site is ${'https://albert-d-chen.github.io/portfolio/'.link('https://albert-d-chen.github.io/portfolio/')}`);
-            } else if (message.text && message.text.toLowerCase() === "job history") {
-                await bot.reply(message, `This is my job history:`);
-            } 
+            } else if (
+              message.text &&
+              message.text.toLowerCase() === "exelixis details"
+            ) {
+              await bot.reply(
+                message,
+                "I was an Associate Research Scientist-I intern where I learned about Mosaic inventory system and how to process substances into the system, and worked with Hamilton Verso automated sample management system to simplify daily workflow"
+              );
+            } else if (
+              message.text &&
+              message.text.toLowerCase() === "exelixis time worked"
+            ) {
+              await bot.reply(
+                message,
+                "I worked at Exelixis from June 2018 to September 2018"
+              );
+            } else if (
+              message.text &&
+              message.text.toLowerCase() === "actri details"
+            ) {
+              await bot.reply(
+                message,
+                `I was a graduate researcher and defended thesis on “Effects of Osmotic Pressures and TRPV-4 Inhibitors on Calcium Levels in Dorsal Root Ganglion Cells”`
+              );
+            } else if (
+              message.text &&
+              message.text.toLowerCase() === "actri time worked"
+            ) {
+              await bot.reply(
+                message,
+                `I worked at ACTRI from September 2018 to June 2019`
+              );
+            } else {
+                await bot.reply(
+                  message,
+                  `I did not understand that.`
+                );
 
+                await bot.reply(message, {
+                  text: "Maybe try:",
+                  quick_replies: [
+                    {
+                      title: "Education",
+                      payload: "Education",
+                    },
+                    {
+                      title: "Skills",
+                      payload: "Skills",
+                    },
+                    {
+                      title: "Job History",
+                      payload: "Job History",
+                    },
+                    {
+                      title: "Contact Information",
+                      payload: "Contact Information",
+                    },
+                    {
+                      title: "Open to work?",
+                      payload: "Employment Status",
+                    },
+                  ],
+                });
+            }
+
+        if (
+          (message.text && message.text.toLowerCase() === "exelixis details") ||
+          (message.text && message.text.toLowerCase() === "exelixis time worked") ||
+          (message.text && message.text.toLowerCase() === "actri details") ||
+          (message.text && message.text.toLowerCase() === "actri time worked") ||
+          (message.text && message.text.toLowerCase() === "email") ||
+          (message.text && message.text.toLowerCase() === "phone number") ||
+          (message.text && message.text.toLowerCase() === "github") ||
+          (message.text && message.text.toLowerCase() === "angellist") ||
+          (message.text && message.text.toLowerCase() === "linkedin") ||
+          (message.text && message.text.toLowerCase() === "ucsd degree") ||
+          (message.text && message.text.toLowerCase() === "cwru degree") ||
+          (message.text && message.text.toLowerCase() === "aa degree") ||
+          (message.text &&
+            message.text.toLowerCase() === "years attended at cwru") ||
+          (message.text &&
+            message.text.toLowerCase() === "years attended at ucsd") ||
+          (message.text &&
+            message.text.toLowerCase() === "years attended at aa") ||
+          (message.text && message.text.toLowerCase() === "personal site")
+        ) {
           await bot.reply(message, {
             text: "What else would you like to know about me?",
             quick_replies: [
@@ -74,6 +156,10 @@ module.exports = function(controller) {
                 payload: "Skills",
               },
               {
+                title: "Job History",
+                payload: "Job History",
+              },
+              {
                 title: "Contact Information",
                 payload: "Contact Information",
               },
@@ -83,9 +169,68 @@ module.exports = function(controller) {
               },
             ],
           });
+        }
         }, 1000);
         
 
+        setTimeout(async () => {
+          // will have to reset context because turn has now ended.
+          await bot.changeContext(message.reference);
+          if (message.text && message.text.toLowerCase() === "job history") {
+                await bot.reply(message, {
+                    text: "This is my job history, what would you like to know more about?",
+                    quick_replies: [
+                    {
+                        title: "Exelixis",
+                        payload: "Exelixis",
+                    },
+                    {
+                        title: "Altman Clinical & Translational Research Institute",
+                        payload: "ACTRI",
+                    },
+                    ],
+          });
+        }
+        }, 1000);
+
+        setTimeout(async () => {
+          // will have to reset context because turn has now ended.
+          await bot.changeContext(message.reference);
+          if (message.text && message.text.toLowerCase() === "exelixis") {
+                await bot.reply(message, {
+                    text: "What would you like to know more about?",
+                    quick_replies: [
+                    {
+                        title: "Exelixis Details",
+                        payload: "Exelixis Details",
+                    },
+                    {
+                        title: "Exelixis Time Worked",
+                        payload: "Exelixis Time Worked",
+                    },
+                    ],
+          });
+        }
+          if (message.text && message.text.toLowerCase() === "actri") {
+                await bot.reply(message, {
+                    text: "What would you like to know more about?",
+                    quick_replies: [
+                    {
+                        title: "ACTRI Details",
+                        payload: "ACTRI Details",
+                    },
+                    {
+                        title: "ACTRI Time Worked",
+                        payload: "ACTRI Time Worked",
+                    },
+                    ],
+          });
+        }
+
+        
+
+
+        }, 1000);
     });
 
 
