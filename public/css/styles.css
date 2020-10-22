@@ -8,7 +8,7 @@ html {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  background-color: #FFF;
+  background-color: rgb(41, 41, 41);
   font-family: "helvetica", sans-serif;
 }
 
@@ -24,7 +24,7 @@ html {
 }
 
 .box {
-  border: 2px solid #CCC;
+  border: 1px solid #CCC;
   padding: 1rem calc(1rem - 2px);
   margin-bottom: 1rem;
 }
@@ -122,8 +122,8 @@ a.button:hover {
 /* chat client */
 #message_window {
   background: #FFFFFF;
-  border-left: 1px solid #CCC;
-  border-right: 1px solid #CCC;
+  /* border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC; */
   /*height: 500px;
   width: 320px;*/
   height: 100%;
@@ -155,10 +155,11 @@ a.button:hover {
 #message_window .powered_by {
   flex-shrink: 0;
   text-align: center;
-  border-bottom: 1px solid #CCC;
+  /* border-bottom: 1px solid #CCC; */
   font-size: 14px;
   padding: 0.25rem;
   color: #666;
+  background-color: black;
 }
 #message_window .powered_by a {
   text-decoration: none;
@@ -173,6 +174,7 @@ a.button:hover {
   flex-direction: column-reverse;
   display: flex;
   overflow-y: auto;
+  background-color: black;
 }
 #message_window section div div {
   margin: 0.25rem;
@@ -256,7 +258,7 @@ a.button:hover {
 }
 #message_window .message.outgoing {
   float: right;
-  background: #a8e3f0;
+  background: #48cbe9;
   color: white;
 }
 #message_window #message_replies {
@@ -270,6 +272,7 @@ a.button:hover {
   list-style-type: none;
   margin: 0px auto;
   padding: 0;
+  background-color: black;
 }
 #message_window #message_replies ul li {
   display: inline-block;
@@ -280,14 +283,16 @@ a.button:hover {
   text-decoration: none;
   display: block;
   border: 1px solid #a795ef;
-  color: #a795ef;
+  color: white;
+  background-color: #a795ef;
   border-radius: 16px;
   padding: 0.25rem 1rem;
   font-size: 14px;
   cursor: pointer;
 }
+
 #message_window #message_replies a:hover {
-  background: #a795ef;
+  background: #6442eb;
   color: #FFF;
 }
 
